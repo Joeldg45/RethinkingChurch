@@ -19,11 +19,78 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Popup Scripts -->
   <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
+    $(window).on('load', function() {
+      $('#myModal').modal('show');
     });
-</script>
+  </script>
+
+  <!-- Timer Scripts -->
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("lagos").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("lagos").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
 </head>
 
 <body>
@@ -32,7 +99,7 @@
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-          <img src="images/rethinkingchurchlagosabuja.jpg" alt="church-event">
+        <img src="images/rethinkingchurchlagosabuja.jpg" alt="church-event">
       </div>
     </div>
   </div>
@@ -86,6 +153,19 @@
           <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
         </div> -->
       </div>
+
+      <div class="powr-countdown-timer" id="0ab82b6e_1592430069"></div><script src="https://www.powr.io/powr.js?platform=embed"></script>
+
+      <!-- <div class="row top-buffer">
+        <p class="testimonial-text" style="color: white;">Days till Abuja:</p>
+        <p class="testimonial-text tab" style="color: white;" id="demo"></p>
+      </div>
+
+      <div class="row top-buffer">
+        <p class="testimonial-text" style="color: white;">Days till Lagos:</p>
+        <p class="testimonial-text tab" style="color: white;" id="lagos"></p>
+      </div> -->
+
 
 
     </div>
@@ -233,8 +313,7 @@
     <div class="container-fluid">
 
       <div class="row">
-
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch d-flex align-items-stretch mb-5">
           <div class="card">
             <img src="images/PHILIP-IGBINIJESU.png" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
@@ -251,12 +330,13 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
           <div class="card">
             <img src="images/Ose-Saint-Ekoh.png" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
               <h5 class="card-title" style="color:black;">Ose Saint Ekoh</h5>
-              <p class="card-text">President/Convener of More Ministries.</p>
+              <p class="card-text">Apostle Ose Saint Ekoh is the President of More Ministries and global convener of More Seminars. He is also the lead communicator at More Church, Columbus, Georgia. His mission is to help believers and churches go
+                further and farther. He believes everyone is made for more.</p>
             </div>
 
             <div class="card-body">
@@ -268,7 +348,7 @@
         </div>
 
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
           <div class="card">
             <img src="images/BEN-IRABOR.png" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
@@ -283,12 +363,15 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
           <div class="card">
             <img src="images/GEORGE-IRABOR.png" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
               <h5 class="card-title" style="color:black;">GEORGE IRABOR</h5>
-              <p class="card-text">Pastor George Bryan Irabor is the Lead Pastor of Fountain of Grace Church, Boston. He has developed a standard of excellence that is apparent in his commitment to ministry. His goal is to help build a healthy church
+              <p class="card-text">Pastor George Bryan Irabor is the Lead Pastor of Fountain of Grace Church, Boston. He has developed a standard of excellence that is apparent in his commitment to ministry. His goal is to help build a healthy
+                church
                 and ministry focusing on Church Culture and Systems.</p>
             </div>
 
@@ -302,7 +385,7 @@
         </div>
 
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
           <div class="card">
             <img src="images/BENNY-MOMOH.png" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
@@ -320,12 +403,13 @@
         </div>
 
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
           <div class="card">
-            <img src="images/CHRISTIAN-OKECHUKWU.png" class="card-img-top" alt="Image of Lagos">
+            <img src="images/IMG_6349.PNG" class="card-img-top" alt="Image of Lagos">
             <div class="card-body">
               <h5 class="card-title" style="color:black;">PASTOR CHRISTIAN OKECHUKWU</h5>
-              <p class="card-text">Pastor Christian Okechukwu Ebbi is the Lead Pastor of Icon of Grace. He is passionate for the development of excellent and enduring leaders. His drive is to assist ministers in building healthy and relevant churches
+              <p class="card-text">Pastor Christian Okechukwu Ebbi is the Lead Pastor of Icon of Grace. He is passionate for the development of excellent and enduring leaders. His drive is to assist ministers in building healthy and relevant
+                churches
                 by developing practical and effective templates for leadership and relationships.</p>
             </div>
           </div>

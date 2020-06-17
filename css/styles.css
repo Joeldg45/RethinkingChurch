@@ -3,6 +3,12 @@ body {
   text-align: center;
 }
 
+.top-buffer { margin-right:100px; }
+
+.tab {
+ margin-left: .5em
+}
+
 /* Container Section */
 .container-fluid {
   padding: 7% 15%;
