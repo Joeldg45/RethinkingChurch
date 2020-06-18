@@ -1,1 +1,1 @@
-TinDog Starting Files
+Rethinking Church Starting Files
