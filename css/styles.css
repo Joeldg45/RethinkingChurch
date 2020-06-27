@@ -3,10 +3,22 @@ body {
   text-align: center;
 }
 
-.top-buffer { margin-right:100px; }
+#events .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+.top-buffer {
+  margin-right: 100px;
+}
+
+.text-event {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .tab {
- margin-left: .5em
+  margin-left: .5em
 }
 
 /* Container Section */
@@ -19,6 +31,7 @@ body {
   background-color: #35635b;
   color: #fff;
 }
+
 /* ff4c68 */
 .white-section {
   background-color: #fff;
